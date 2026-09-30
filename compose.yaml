@@ -1,27 +1,52 @@
-name: order-tracker
-
+name: hw04-order-tracker
 services:
   app:
-    image: order-tracker:${ORDER_TRACKER_TAG:-local}
+    image: hw04-order-tracker:${ORDER_TRACKER_TAG:-local}
     build: .
-    ports:
-      - "127.0.0.1:${ORDER_TRACKER_PORT:-8000}:8000"
+    ports: ["127.0.0.1:${ORDER_TRACKER_PORT:-8000}:8000"]
     environment:
       ORDER_DB_PATH: /data/orders.db
-    volumes:
-      - orders:/data
+      APP_VERSION: ${APP_VERSION:-hw04-instrumented}
+      OTEL_EXPORTER_MODE: otlp
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4318
+    volumes: [orders:/data]
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/healthz', timeout=3)"]
       interval: 5s
       timeout: 3s
       retries: 12
-
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:0.162.0-amd64
+    platform: linux/amd64
+    command: ["--config=/etc/otelcol/config.yaml"]
+    volumes: ["./observability/collector.yaml:/etc/otelcol/config.yaml:ro"]
+    ports: ["127.0.0.1:13133:13133"]
+  prometheus:
+    image: prom/prometheus:v3.5.0
+    volumes: ["./observability/prometheus.yaml:/etc/prometheus/prometheus.yml:ro"]
+    ports: ["127.0.0.1:9090:9090"]
+  loki:
+    image: grafana/loki:3.5.3
+    command: ["-config.file=/etc/loki/config.yaml"]
+    volumes: ["./observability/loki.yaml:/etc/loki/config.yaml:ro"]
+    ports: ["127.0.0.1:3100:3100"]
+  tempo:
+    image: grafana/tempo:2.8.2
+    command: ["-config.file=/etc/tempo/config.yaml"]
+    volumes: ["./observability/tempo.yaml:/etc/tempo/config.yaml:ro"]
+    ports: ["127.0.0.1:3200:3200"]
+  grafana:
+    image: grafana/grafana:12.1.1
+    ports: ["127.0.0.1:3000:3000"]
+    environment:
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+      GF_AUTH_ANONYMOUS_ORG_ROLE: Viewer
+      GF_AUTH_DISABLE_LOGIN_FORM: "false"
+      GF_UNIFIED_ALERTING_ENABLED: "true"
+    volumes:
+      - ./observability/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./observability/grafana/dashboards:/var/lib/grafana/dashboards:ro
+    extra_hosts: ["host.docker.internal:host-gateway"]
 volumes:
   orders:
-
-networks:
-  default:
-    ipam:
-      config:
-        - subnet: ${ORDER_TRACKER_SUBNET:-10.215.24.0/24}

@@ -1,0 +1,78 @@
+{
+  "uid": "order-tracker",
+  "title": "Order Tracker",
+  "schemaVersion": 39,
+  "version": 1,
+  "refresh": "5s",
+  "time": {
+    "from": "now-15m",
+    "to": "now"
+  },
+  "panels": [
+    {
+      "id": 1,
+      "title": "Requests by route and status",
+      "type": "timeseries",
+      "gridPos": {
+        "x": 0,
+        "y": 0,
+        "w": 12,
+        "h": 8
+      },
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "sum by (http_route,http_response_status_code) (rate(http_server_requests_total[1m]))",
+          "legendFormat": "{{http_route}} · {{http_response_status_code}}"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Order lookup server errors in the last minute",
+      "type": "timeseries",
+      "gridPos": {
+        "x": 12,
+        "y": 0,
+        "w": 12,
+        "h": 8
+      },
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "sum(increase(http_server_requests_total{http_route=\"/api/orders/{order_id}\",http_response_status_code=~\"5..\"}[1m])) or vector(0)",
+          "legendFormat": "5xx responses"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Request logs",
+      "type": "logs",
+      "gridPos": {
+        "x": 0,
+        "y": 8,
+        "w": 24,
+        "h": 8
+      },
+      "datasource": {
+        "type": "loki",
+        "uid": "loki"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "{service_name=\"order-tracker\"}"
+        }
+      ]
+    }
+  ]
+}

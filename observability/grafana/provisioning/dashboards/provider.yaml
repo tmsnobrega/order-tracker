@@ -1,0 +1,7 @@
+apiVersion: 1
+providers:
+  - name: Homework 04
+    folder: Homework 04
+    type: file
+    options:
+      path: /var/lib/grafana/dashboards

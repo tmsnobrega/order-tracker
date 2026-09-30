@@ -1,0 +1,4 @@
+services:
+  app:
+    environment:
+      OTEL_EXPORTER_MODE: console

@@ -1,0 +1,759 @@
+{
+  "http_status": 200,
+  "telemetry": [
+    {
+      "resource_metrics": [
+        {
+          "resource": {
+            "attributes": {
+              "telemetry.sdk.language": "python",
+              "telemetry.sdk.name": "opentelemetry",
+              "telemetry.sdk.version": "1.38.0",
+              "service.name": "order-tracker",
+              "service.version": "hw04-instrumented"
+            },
+            "schema_url": ""
+          },
+          "scope_metrics": [
+            {
+              "scope": {
+                "name": "order-tracker",
+                "version": "",
+                "schema_url": "",
+                "attributes": null
+              },
+              "metrics": [
+                {
+                  "name": "http.server.requests",
+                  "description": "",
+                  "unit": "",
+                  "data": {
+                    "data_points": [
+                      {
+                        "attributes": {
+                          "http.route": "/healthz",
+                          "http.request.method": "GET",
+                          "http.response.status_code": 200
+                        },
+                        "start_time_unix_nano": 1790757790439140878,
+                        "time_unix_nano": 1790757865904819844,
+                        "value": 11,
+                        "exemplars": []
+                      }
+                    ],
+                    "aggregation_temporality": 2,
+                    "is_monotonic": true
+                  }
+                }
+              ],
+              "schema_url": ""
+            }
+          ],
+          "schema_url": ""
+        }
+      ]
+    },
+    {
+      "body": "request finished",
+      "severity_number": 9,
+      "severity_text": "INFO",
+      "attributes": {
+        "http.route": "/healthz",
+        "http.request.method": "GET",
+        "http.response.status_code": 200,
+        "code.file.path": "/app/app/telemetry.py",
+        "code.function.name": "__call__",
+        "code.line.number": 87
+      },
+      "dropped_attributes": 0,
+      "timestamp": "2026-09-30T08:44:27.248091Z",
+      "observed_timestamp": "2026-09-30T08:44:27.249164Z",
+      "trace_id": "0x7e5bfe8467851ba03b0b35a2efe2a8ae",
+      "span_id": "0x098c5f5df2498f7a",
+      "trace_flags": 1,
+      "resource": {
+        "attributes": {
+          "telemetry.sdk.language": "python",
+          "telemetry.sdk.name": "opentelemetry",
+          "telemetry.sdk.version": "1.38.0",
+          "service.name": "order-tracker",
+          "service.version": "hw04-instrumented"
+        },
+        "schema_url": ""
+      },
+      "event_name": ""
+    },
+    {
+      "name": "GET /healthz",
+      "context": {
+        "trace_id": "0x7e5bfe8467851ba03b0b35a2efe2a8ae",
+        "span_id": "0x098c5f5df2498f7a",
+        "trace_state": "[]"
+      },
+      "kind": "SpanKind.SERVER",
+      "parent_id": null,
+      "start_time": "2026-09-30T08:44:27.182035Z",
+      "end_time": "2026-09-30T08:44:27.252009Z",
+      "status": {
+        "status_code": "UNSET"
+      },
+      "attributes": {
+        "http.route": "/healthz",
+        "http.request.method": "GET",
+        "http.response.status_code": 200
+      },
+      "events": [],
+      "links": [],
+      "resource": {
+        "attributes": {
+          "telemetry.sdk.language": "python",
+          "telemetry.sdk.name": "opentelemetry",
+          "telemetry.sdk.version": "1.38.0",
+          "service.name": "order-tracker",
+          "service.version": "hw04-instrumented"
+        },
+        "schema_url": ""
+      }
+    },
+    {
+      "resource_metrics": [
+        {
+          "resource": {
+            "attributes": {
+              "telemetry.sdk.language": "python",
+              "telemetry.sdk.name": "opentelemetry",
+              "telemetry.sdk.version": "1.38.0",
+              "service.name": "order-tracker",
+              "service.version": "hw04-instrumented"
+            },
+            "schema_url": ""
+          },
+          "scope_metrics": [
+            {
+              "scope": {
+                "name": "order-tracker",
+                "version": "",
+                "schema_url": "",
+                "attributes": null
+              },
+              "metrics": [
+                {
+                  "name": "http.server.requests",
+                  "description": "",
+                  "unit": "",
+                  "data": {
+                    "data_points": [
+                      {
+                        "attributes": {
+                          "http.route": "/healthz",
+                          "http.request.method": "GET",
+                          "http.response.status_code": 200
+                        },
+                        "start_time_unix_nano": 1790757790439140878,
+                        "time_unix_nano": 1790757870972866949,
+                        "value": 12,
+                        "exemplars": [
+                          {
+                            "filtered_attributes": {},
+                            "value": 1,
+                            "time_unix_nano": 1790757867246719628,
+                            "span_id": 688029700182347642,
+                            "trace_id": 167960388705220722312492139990655084718
+                          }
+                        ]
+                      }
+                    ],
+                    "aggregation_temporality": 2,
+                    "is_monotonic": true
+                  }
+                }
+              ],
+              "schema_url": ""
+            }
+          ],
+          "schema_url": ""
+        }
+      ]
+    },
+    {
+      "body": "request finished",
+      "severity_number": 9,
+      "severity_text": "INFO",
+      "attributes": {
+        "http.route": "/healthz",
+        "http.request.method": "GET",
+        "http.response.status_code": 200,
+        "code.file.path": "/app/app/telemetry.py",
+        "code.function.name": "__call__",
+        "code.line.number": 87
+      },
+      "dropped_attributes": 0,
+      "timestamp": "2026-09-30T08:44:32.686146Z",
+      "observed_timestamp": "2026-09-30T08:44:32.686233Z",
+      "trace_id": "0xd6f6366268eb351d642320e6c2dac733",
+      "span_id": "0x451470e22ed91dc8",
+      "trace_flags": 1,
+      "resource": {
+        "attributes": {
+          "telemetry.sdk.language": "python",
+          "telemetry.sdk.name": "opentelemetry",
+          "telemetry.sdk.version": "1.38.0",
+          "service.name": "order-tracker",
+          "service.version": "hw04-instrumented"
+        },
+        "schema_url": ""
+      },
+      "event_name": ""
+    },
+    {
+      "name": "GET /healthz",
+      "context": {
+        "trace_id": "0xd6f6366268eb351d642320e6c2dac733",
+        "span_id": "0x451470e22ed91dc8",
+        "trace_state": "[]"
+      },
+      "kind": "SpanKind.SERVER",
+      "parent_id": null,
+      "start_time": "2026-09-30T08:44:32.683033Z",
+      "end_time": "2026-09-30T08:44:32.686434Z",
+      "status": {
+        "status_code": "UNSET"
+      },
+      "attributes": {
+        "http.route": "/healthz",
+        "http.request.method": "GET",
+        "http.response.status_code": 200
+      },
+      "events": [],
+      "links": [],
+      "resource": {
+        "attributes": {
+          "telemetry.sdk.language": "python",
+          "telemetry.sdk.name": "opentelemetry",
+          "telemetry.sdk.version": "1.38.0",
+          "service.name": "order-tracker",
+          "service.version": "hw04-instrumented"
+        },
+        "schema_url": ""
+      }
+    },
+    {
+      "resource_metrics": [
+        {
+          "resource": {
+            "attributes": {
+              "telemetry.sdk.language": "python",
+              "telemetry.sdk.name": "opentelemetry",
+              "telemetry.sdk.version": "1.38.0",
+              "service.name": "order-tracker",
+              "service.version": "hw04-instrumented"
+            },
+            "schema_url": ""
+          },
+          "scope_metrics": [
+            {
+              "scope": {
+                "name": "order-tracker",
+                "version": "",
+                "schema_url": "",
+                "attributes": null
+              },
+              "metrics": [
+                {
+                  "name": "http.server.requests",
+                  "description": "",
+                  "unit": "",
+                  "data": {
+                    "data_points": [
+                      {
+                        "attributes": {
+                          "http.route": "/healthz",
+                          "http.request.method": "GET",
+                          "http.response.status_code": 200
+                        },
+                        "start_time_unix_nano": 1790757790439140878,
+                        "time_unix_nano": 1790757875974834991,
+                        "value": 13,
+                        "exemplars": [
+                          {
+                            "filtered_attributes": {},
+                            "value": 1,
+                            "time_unix_nano": 1790757872686036733,
+                            "span_id": 4977727604902141384,
+                            "trace_id": 285733199172120877402765332751526315827
+                          }
+                        ]
+                      }
+                    ],
+                    "aggregation_temporality": 2,
+                    "is_monotonic": true
+                  }
+                }
+              ],
+              "schema_url": ""
+            }
+          ],
+          "schema_url": ""
+        }
+      ]
+    },
+    {
+      "name": "GET /healthz",
+      "context": {
+        "trace_id": "0xdf942d3a0fb4a81307ab41ffa53a8284",
+        "span_id": "0x38c3c73481e45767",
+        "trace_state": "[]"
+      },
+      "kind": "SpanKind.SERVER",
+      "parent_id": null,
+      "start_time": "2026-09-30T08:44:38.113056Z",
+      "end_time": "2026-09-30T08:44:38.124624Z",
+      "status": {
+        "status_code": "UNSET"
+      },
+      "attributes": {
+        "http.route": "/healthz",
+        "http.request.method": "GET",
+        "http.response.status_code": 200
+      },
+      "events": [],
+      "links": [],
+      "resource": {
+        "attributes": {
+          "telemetry.sdk.language": "python",
+          "telemetry.sdk.name": "opentelemetry",
+          "telemetry.sdk.version": "1.38.0",
+          "service.name": "order-tracker",
+          "service.version": "hw04-instrumented"
+        },
+        "schema_url": ""
+      }
+    },
+    {
+      "body": "request finished",
+      "severity_number": 9,
+      "severity_text": "INFO",
+      "attributes": {
+        "http.route": "/healthz",
+        "http.request.method": "GET",
+        "http.response.status_code": 200,
+        "code.file.path": "/app/app/telemetry.py",
+        "code.function.name": "__call__",
+        "code.line.number": 87
+      },
+      "dropped_attributes": 0,
+      "timestamp": "2026-09-30T08:44:38.124399Z",
+      "observed_timestamp": "2026-09-30T08:44:38.124466Z",
+      "trace_id": "0xdf942d3a0fb4a81307ab41ffa53a8284",
+      "span_id": "0x38c3c73481e45767",
+      "trace_flags": 1,
+      "resource": {
+        "attributes": {
+          "telemetry.sdk.language": "python",
+          "telemetry.sdk.name": "opentelemetry",
+          "telemetry.sdk.version": "1.38.0",
+          "service.name": "order-tracker",
+          "service.version": "hw04-instrumented"
+        },
+        "schema_url": ""
+      },
+      "event_name": ""
+    },
+    {
+      "resource_metrics": [
+        {
+          "resource": {
+            "attributes": {
+              "telemetry.sdk.language": "python",
+              "telemetry.sdk.name": "opentelemetry",
+              "telemetry.sdk.version": "1.38.0",
+              "service.name": "order-tracker",
+              "service.version": "hw04-instrumented"
+            },
+            "schema_url": ""
+          },
+          "scope_metrics": [
+            {
+              "scope": {
+                "name": "order-tracker",
+                "version": "",
+                "schema_url": "",
+                "attributes": null
+              },
+              "metrics": [
+                {
+                  "name": "http.server.requests",
+                  "description": "",
+                  "unit": "",
+                  "data": {
+                    "data_points": [
+                      {
+                        "attributes": {
+                          "http.route": "/healthz",
+                          "http.request.method": "GET",
+                          "http.response.status_code": 200
+                        },
+                        "start_time_unix_nano": 1790757790439140878,
+                        "time_unix_nano": 1790757880984016455,
+                        "value": 14,
+                        "exemplars": [
+                          {
+                            "filtered_attributes": {},
+                            "value": 1,
+                            "time_unix_nano": 1790757878124286737,
+                            "span_id": 4090331914913994599,
+                            "trace_id": 297187220303625659802532822679822172804
+                          }
+                        ]
+                      }
+                    ],
+                    "aggregation_temporality": 2,
+                    "is_monotonic": true
+                  }
+                }
+              ],
+              "schema_url": ""
+            }
+          ],
+          "schema_url": ""
+        }
+      ]
+    },
+    {
+      "name": "GET /healthz",
+      "context": {
+        "trace_id": "0x3af28c0df68bf83a8c04707a7269b324",
+        "span_id": "0x1df26b438f67aafd",
+        "trace_state": "[]"
+      },
+      "kind": "SpanKind.SERVER",
+      "parent_id": null,
+      "start_time": "2026-09-30T08:44:43.597739Z",
+      "end_time": "2026-09-30T08:44:43.624403Z",
+      "status": {
+        "status_code": "UNSET"
+      },
+      "attributes": {
+        "http.route": "/healthz",
+        "http.request.method": "GET",
+        "http.response.status_code": 200
+      },
+      "events": [],
+      "links": [],
+      "resource": {
+        "attributes": {
+          "telemetry.sdk.language": "python",
+          "telemetry.sdk.name": "opentelemetry",
+          "telemetry.sdk.version": "1.38.0",
+          "service.name": "order-tracker",
+          "service.version": "hw04-instrumented"
+        },
+        "schema_url": ""
+      }
+    },
+    {
+      "name": "GET /api/orders/{order_id}",
+      "context": {
+        "trace_id": "0xf923803c17752d0dfbcd803dbb5dc30e",
+        "span_id": "0x843a910e49f6d389",
+        "trace_state": "[]"
+      },
+      "kind": "SpanKind.SERVER",
+      "parent_id": null,
+      "start_time": "2026-09-30T08:44:45.478096Z",
+      "end_time": "2026-09-30T08:44:45.581069Z",
+      "status": {
+        "status_code": "UNSET"
+      },
+      "attributes": {
+        "http.route": "/api/orders/{order_id}",
+        "http.request.method": "GET",
+        "http.response.status_code": 200
+      },
+      "events": [],
+      "links": [],
+      "resource": {
+        "attributes": {
+          "telemetry.sdk.language": "python",
+          "telemetry.sdk.name": "opentelemetry",
+          "telemetry.sdk.version": "1.38.0",
+          "service.name": "order-tracker",
+          "service.version": "hw04-instrumented"
+        },
+        "schema_url": ""
+      }
+    },
+    {
+      "body": "request finished",
+      "severity_number": 9,
+      "severity_text": "INFO",
+      "attributes": {
+        "http.route": "/healthz",
+        "http.request.method": "GET",
+        "http.response.status_code": 200,
+        "code.file.path": "/app/app/telemetry.py",
+        "code.function.name": "__call__",
+        "code.line.number": 87
+      },
+      "dropped_attributes": 0,
+      "timestamp": "2026-09-30T08:44:43.623363Z",
+      "observed_timestamp": "2026-09-30T08:44:43.623543Z",
+      "trace_id": "0x3af28c0df68bf83a8c04707a7269b324",
+      "span_id": "0x1df26b438f67aafd",
+      "trace_flags": 1,
+      "resource": {
+        "attributes": {
+          "telemetry.sdk.language": "python",
+          "telemetry.sdk.name": "opentelemetry",
+          "telemetry.sdk.version": "1.38.0",
+          "service.name": "order-tracker",
+          "service.version": "hw04-instrumented"
+        },
+        "schema_url": ""
+      },
+      "event_name": ""
+    },
+    {
+      "body": "request finished",
+      "severity_number": 9,
+      "severity_text": "INFO",
+      "attributes": {
+        "http.route": "/api/orders/{order_id}",
+        "http.request.method": "GET",
+        "http.response.status_code": 200,
+        "code.file.path": "/app/app/telemetry.py",
+        "code.function.name": "__call__",
+        "code.line.number": 87
+      },
+      "dropped_attributes": 0,
+      "timestamp": "2026-09-30T08:44:45.580677Z",
+      "observed_timestamp": "2026-09-30T08:44:45.580793Z",
+      "trace_id": "0xf923803c17752d0dfbcd803dbb5dc30e",
+      "span_id": "0x843a910e49f6d389",
+      "trace_flags": 1,
+      "resource": {
+        "attributes": {
+          "telemetry.sdk.language": "python",
+          "telemetry.sdk.name": "opentelemetry",
+          "telemetry.sdk.version": "1.38.0",
+          "service.name": "order-tracker",
+          "service.version": "hw04-instrumented"
+        },
+        "schema_url": ""
+      },
+      "event_name": ""
+    },
+    {
+      "resource_metrics": [
+        {
+          "resource": {
+            "attributes": {
+              "telemetry.sdk.language": "python",
+              "telemetry.sdk.name": "opentelemetry",
+              "telemetry.sdk.version": "1.38.0",
+              "service.name": "order-tracker",
+              "service.version": "hw04-instrumented"
+            },
+            "schema_url": ""
+          },
+          "scope_metrics": [
+            {
+              "scope": {
+                "name": "order-tracker",
+                "version": "",
+                "schema_url": "",
+                "attributes": null
+              },
+              "metrics": [
+                {
+                  "name": "http.server.requests",
+                  "description": "",
+                  "unit": "",
+                  "data": {
+                    "data_points": [
+                      {
+                        "attributes": {
+                          "http.route": "/healthz",
+                          "http.request.method": "GET",
+                          "http.response.status_code": 200
+                        },
+                        "start_time_unix_nano": 1790757790439140878,
+                        "time_unix_nano": 1790757885917800199,
+                        "value": 15,
+                        "exemplars": [
+                          {
+                            "filtered_attributes": {},
+                            "value": 1,
+                            "time_unix_nano": 1790757883621686586,
+                            "span_id": 2157905109376805629,
+                            "trace_id": 78354600238903698165686471984354538276
+                          }
+                        ]
+                      },
+                      {
+                        "attributes": {
+                          "http.route": "/api/orders/{order_id}",
+                          "http.request.method": "GET",
+                          "http.response.status_code": 200
+                        },
+                        "start_time_unix_nano": 1790757885577628980,
+                        "time_unix_nano": 1790757885917800199,
+                        "value": 1,
+                        "exemplars": [
+                          {
+                            "filtered_attributes": {},
+                            "value": 1,
+                            "time_unix_nano": 1790757885573590620,
+                            "span_id": 9528087452212188041,
+                            "trace_id": 331162102249871601900950596004869948174
+                          }
+                        ]
+                      }
+                    ],
+                    "aggregation_temporality": 2,
+                    "is_monotonic": true
+                  }
+                }
+              ],
+              "schema_url": ""
+            }
+          ],
+          "schema_url": ""
+        }
+      ]
+    },
+    {
+      "name": "GET /healthz",
+      "context": {
+        "trace_id": "0x7842029f91a8a03cb07943ec9461b7f0",
+        "span_id": "0x1e6d3ddda9e613f5",
+        "trace_state": "[]"
+      },
+      "kind": "SpanKind.SERVER",
+      "parent_id": null,
+      "start_time": "2026-09-30T08:44:48.935956Z",
+      "end_time": "2026-09-30T08:44:48.940617Z",
+      "status": {
+        "status_code": "UNSET"
+      },
+      "attributes": {
+        "http.route": "/healthz",
+        "http.request.method": "GET",
+        "http.response.status_code": 200
+      },
+      "events": [],
+      "links": [],
+      "resource": {
+        "attributes": {
+          "telemetry.sdk.language": "python",
+          "telemetry.sdk.name": "opentelemetry",
+          "telemetry.sdk.version": "1.38.0",
+          "service.name": "order-tracker",
+          "service.version": "hw04-instrumented"
+        },
+        "schema_url": ""
+      }
+    },
+    {
+      "body": "request finished",
+      "severity_number": 9,
+      "severity_text": "INFO",
+      "attributes": {
+        "http.route": "/healthz",
+        "http.request.method": "GET",
+        "http.response.status_code": 200,
+        "code.file.path": "/app/app/telemetry.py",
+        "code.function.name": "__call__",
+        "code.line.number": 87
+      },
+      "dropped_attributes": 0,
+      "timestamp": "2026-09-30T08:44:48.940271Z",
+      "observed_timestamp": "2026-09-30T08:44:48.940360Z",
+      "trace_id": "0x7842029f91a8a03cb07943ec9461b7f0",
+      "span_id": "0x1e6d3ddda9e613f5",
+      "trace_flags": 1,
+      "resource": {
+        "attributes": {
+          "telemetry.sdk.language": "python",
+          "telemetry.sdk.name": "opentelemetry",
+          "telemetry.sdk.version": "1.38.0",
+          "service.name": "order-tracker",
+          "service.version": "hw04-instrumented"
+        },
+        "schema_url": ""
+      },
+      "event_name": ""
+    },
+    {
+      "resource_metrics": [
+        {
+          "resource": {
+            "attributes": {
+              "telemetry.sdk.language": "python",
+              "telemetry.sdk.name": "opentelemetry",
+              "telemetry.sdk.version": "1.38.0",
+              "service.name": "order-tracker",
+              "service.version": "hw04-instrumented"
+            },
+            "schema_url": ""
+          },
+          "scope_metrics": [
+            {
+              "scope": {
+                "name": "order-tracker",
+                "version": "",
+                "schema_url": "",
+                "attributes": null
+              },
+              "metrics": [
+                {
+                  "name": "http.server.requests",
+                  "description": "",
+                  "unit": "",
+                  "data": {
+                    "data_points": [
+                      {
+                        "attributes": {
+                          "http.route": "/healthz",
+                          "http.request.method": "GET",
+                          "http.response.status_code": 200
+                        },
+                        "start_time_unix_nano": 1790757790439140878,
+                        "time_unix_nano": 1790757890921413553,
+                        "value": 16,
+                        "exemplars": [
+                          {
+                            "filtered_attributes": {},
+                            "value": 1,
+                            "time_unix_nano": 1790757888940135098,
+                            "span_id": 2192476615846794229,
+                            "trace_id": 159850104294029433103258851197849810928
+                          }
+                        ]
+                      },
+                      {
+                        "attributes": {
+                          "http.route": "/api/orders/{order_id}",
+                          "http.request.method": "GET",
+                          "http.response.status_code": 200
+                        },
+                        "start_time_unix_nano": 1790757885577628980,
+                        "time_unix_nano": 1790757890921413553,
+                        "value": 1,
+                        "exemplars": []
+                      }
+                    ],
+                    "aggregation_temporality": 2,
+                    "is_monotonic": true
+                  }
+                }
+              ],
+              "schema_url": ""
+            }
+          ],
+          "schema_url": ""
+        }
+      ]
+    }
+  ]
+}
