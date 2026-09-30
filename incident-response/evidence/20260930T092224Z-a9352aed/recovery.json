@@ -1,0 +1,15 @@
+{
+  "http_status": 200,
+  "deployment_version": "hw04-fixed",
+  "order_id": "express-1002",
+  "estimated_delivery": "2026-09-02",
+  "command": [
+    "docker",
+    "compose",
+    "up",
+    "--build",
+    "-d",
+    "--wait",
+    "app"
+  ]
+}

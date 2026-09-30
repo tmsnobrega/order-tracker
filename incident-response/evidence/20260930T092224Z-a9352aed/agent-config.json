@@ -1,0 +1,8 @@
+{
+  "cli": "codex exec",
+  "user_config": "ignored",
+  "sandbox": "read-only",
+  "timeout_seconds": 300,
+  "scope": "isolated incident workspace",
+  "deployment_access": false
+}

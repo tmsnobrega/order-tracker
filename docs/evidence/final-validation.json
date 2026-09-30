@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-09-30T09:30:17.186790+00:00",
+  "health": {
+    "status": "ok"
+  },
+  "requests": {
+    "standard-1001": 200,
+    "standard-1002": 404,
+    "express-1002": 200,
+    "estimated_delivery": "2026-09-02"
+  },
+  "express_repeat_checks": 5,
+  "tests": "16 passed, 1 warning in 5.23s",
+  "alert": {
+    "state": "Normal",
+    "health": "ok",
+    "last_evaluation": "2026-09-30T09:30:10Z"
+  }
+}

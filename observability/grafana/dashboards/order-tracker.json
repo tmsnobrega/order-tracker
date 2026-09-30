@@ -11,7 +11,7 @@
   "panels": [
     {
       "id": 1,
-      "title": "Requests by route and status",
+      "title": "Requests in the last minute by route and status",
       "type": "timeseries",
       "gridPos": {
         "x": 0,
@@ -26,7 +26,7 @@
       "targets": [
         {
           "refId": "A",
-          "expr": "sum by (http_route,http_response_status_code) (rate(http_server_requests_total[1m]))",
+          "expr": "sum by (http_route,http_response_status_code) (increase(http_server_requests_total[1m]))",
           "legendFormat": "{{http_route}} · {{http_response_status_code}}"
         }
       ]
@@ -70,7 +70,8 @@
       "targets": [
         {
           "refId": "A",
-          "expr": "{service_name=\"order-tracker\"}"
+          "expr": "{service_name=\"order-tracker\"} | http_route=\"/api/orders/{order_id}\"",
+          "maxLines": 100
         }
       ]
     }

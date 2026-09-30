@@ -8,5 +8,3 @@ data/
 .cache/
 incident-response/workspaces/
 incident-response/raw/
-.env
-__pycache__/

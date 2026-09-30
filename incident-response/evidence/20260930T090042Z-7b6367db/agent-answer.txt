@@ -1,0 +1,3 @@
+No repair is needed: this is a test notification, not an incident. The read of `evidence.json` was blocked by policy, so its contents remain unverified. No files were changed and no services were called.
+
+No incident to fix.

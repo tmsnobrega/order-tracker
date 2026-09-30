@@ -1,0 +1,5 @@
+Candidate validation, before deployment:
+13 passed, 1 warning in 7.60s
+
+The warning concerns Starlette's deprecated httpx TestClient integration.
+The full local test output is retained. This excerpt omits machine-specific paths.

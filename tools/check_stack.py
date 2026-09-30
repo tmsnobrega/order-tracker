@@ -18,9 +18,9 @@ def query(source, endpoint, params):
 metrics = query("prometheus", "/api/v1/query", {"query":
     'http_server_requests_total{http_route="/api/orders/{order_id}",http_response_status_code="404"}'})
 assert metrics["data"]["result"], "The 404 request metric is missing"
-logs = query("loki", "/loki/api/v1/query_range", {"query": '{service_name="order-tracker"}', "limit": 20})
+logs = query("loki", "/loki/api/v1/query_range", {"query": '{service_name="order-tracker"} | http_response_status_code="404"', "limit": 1})
 assert logs["data"]["result"], "The request logs are missing"
-traces = query("tempo", "/api/search", {"q": '{resource.service.name="order-tracker"}', "limit": 20})
+traces = query("tempo", "/api/search", {"q": '{resource.service.name="order-tracker" && span.http.response.status_code=404}', "limit": 1})
 assert traces.get("traces"), "The request traces are missing"
 rules_response = httpx.get("http://127.0.0.1:3000/api/prometheus/grafana/api/v1/rules")
 rules_response.raise_for_status()

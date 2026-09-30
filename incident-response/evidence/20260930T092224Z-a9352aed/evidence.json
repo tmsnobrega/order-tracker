@@ -1,0 +1,1606 @@
+{
+  "notification": {
+    "status": "firing",
+    "labels": {
+      "alertname": "Order lookup server errors",
+      "grafana_folder": "Homework 04",
+      "service": "order-tracker",
+      "severity": "warning"
+    },
+    "annotations": {
+      "dashboard": "http://localhost:3000/d/order-tracker/order-tracker",
+      "endpoint": "/api/orders/{order_id}",
+      "summary": "Order lookups are returning server errors.",
+      "time_window": "1 minute"
+    },
+    "startsAt": "2026-09-30T09:22:00Z",
+    "endsAt": "0001-01-01T00:00:00Z",
+    "generatorURL": "http://localhost:3000/alerting/grafana/order-lookup-5xx/view?orgId=1",
+    "fingerprint": "c7344f68568d5c91",
+    "silenceURL": "http://localhost:3000/alerting/silence/new?alertmanager=grafana&matcher=__alert_rule_uid__%3Dorder-lookup-5xx&matcher=service%3Dorder-tracker&matcher=severity%3Dwarning&orgId=1",
+    "dashboardURL": "http://localhost:3000/d/order-tracker?from=1790756520000&orgId=1&to=1790760144298",
+    "panelURL": "http://localhost:3000/d/order-tracker?from=1790756520000&orgId=1&to=1790760144298&viewPanel=2",
+    "values": {
+      "A": 20.626390924387994,
+      "C": 1
+    },
+    "valueString": "[ var='A' labels={} value=20.626390924387994 ], [ var='C' labels={} value=1 ]",
+    "orgId": 1
+  },
+  "evidence": {
+    "captured_at": "2026-09-30T09:22:25.127671+00:00",
+    "source_sha256": "d230f25feaf13d287e3bed0835c1e6fa14a6118f30a2f2a503bd22c314b4b51b",
+    "metrics": {
+      "status": "success",
+      "data": {
+        "resultType": "vector",
+        "result": [
+          {
+            "metric": {
+              "__name__": "http_server_requests_total",
+              "exported_job": "order-tracker",
+              "http_request_method": "GET",
+              "http_response_status_code": "404",
+              "http_route": "/api/orders/{order_id}",
+              "instance": "otel-collector:8889",
+              "job": "order-tracker",
+              "otel_scope_name": "order-tracker",
+              "service_name": "order-tracker",
+              "service_version": "hw04-instrumented",
+              "telemetry_sdk_language": "python",
+              "telemetry_sdk_name": "opentelemetry",
+              "telemetry_sdk_version": "1.38.0"
+            },
+            "value": [
+              1790760145.994,
+              "4"
+            ]
+          },
+          {
+            "metric": {
+              "__name__": "http_server_requests_total",
+              "exported_job": "order-tracker",
+              "http_request_method": "GET",
+              "http_response_status_code": "500",
+              "http_route": "/api/orders/{order_id}",
+              "instance": "otel-collector:8889",
+              "job": "order-tracker",
+              "otel_scope_name": "order-tracker",
+              "service_name": "order-tracker",
+              "service_version": "hw04-instrumented",
+              "telemetry_sdk_language": "python",
+              "telemetry_sdk_name": "opentelemetry",
+              "telemetry_sdk_version": "1.38.0"
+            },
+            "value": [
+              1790760145.994,
+              "119"
+            ]
+          }
+        ]
+      }
+    },
+    "logs": {
+      "status": "success",
+      "data": {
+        "resultType": "streams",
+        "result": [
+          {
+            "stream": {
+              "code_file_path": "/app/app/telemetry.py",
+              "code_function_name": "__call__",
+              "code_line_number": "87",
+              "detected_level": "INFO",
+              "flags": "1",
+              "http_request_method": "GET",
+              "http_response_status_code": "200",
+              "http_route": "/healthz",
+              "observed_timestamp": "1790760139205627176",
+              "scope_name": "order-tracker.requests",
+              "service_name": "order-tracker",
+              "service_version": "hw04-instrumented",
+              "severity_number": "9",
+              "severity_text": "INFO",
+              "span_id": "11f3522feced63fb",
+              "telemetry_sdk_language": "python",
+              "telemetry_sdk_name": "opentelemetry",
+              "telemetry_sdk_version": "1.38.0",
+              "trace_id": "c708f8d2d66379074efbadf7591d7415"
+            },
+            "values": [
+              [
+                "1790760139205528832",
+                "request finished"
+              ]
+            ]
+          },
+          {
+            "stream": {
+              "code_file_path": "/app/app/telemetry.py",
+              "code_function_name": "__call__",
+              "code_line_number": "87",
+              "detected_level": "INFO",
+              "flags": "1",
+              "http_request_method": "GET",
+              "http_response_status_code": "200",
+              "http_route": "/healthz",
+              "observed_timestamp": "1790760131372971168",
+              "scope_name": "order-tracker.requests",
+              "service_name": "order-tracker",
+              "service_version": "hw04-instrumented",
+              "severity_number": "9",
+              "severity_text": "INFO",
+              "span_id": "6021e6200a770b05",
+              "telemetry_sdk_language": "python",
+              "telemetry_sdk_name": "opentelemetry",
+              "telemetry_sdk_version": "1.38.0",
+              "trace_id": "b1ccc2f1d22664c0ab18269947d50b8b"
+            },
+            "values": [
+              [
+                "1790760131372857088",
+                "request finished"
+              ]
+            ]
+          },
+          {
+            "stream": {
+              "code_file_path": "/app/app/telemetry.py",
+              "code_function_name": "__call__",
+              "code_line_number": "87",
+              "detected_level": "INFO",
+              "flags": "1",
+              "http_request_method": "GET",
+              "http_response_status_code": "200",
+              "http_route": "/healthz",
+              "observed_timestamp": "1790760123832971278",
+              "scope_name": "order-tracker.requests",
+              "service_name": "order-tracker",
+              "service_version": "hw04-instrumented",
+              "severity_number": "9",
+              "severity_text": "INFO",
+              "span_id": "48a6f2b5d9f9fde4",
+              "telemetry_sdk_language": "python",
+              "telemetry_sdk_name": "opentelemetry",
+              "telemetry_sdk_version": "1.38.0",
+              "trace_id": "18acd560aa9b204eb64401e2baf9c9b9"
+            },
+            "values": [
+              [
+                "1790760123832893952",
+                "request finished"
+              ]
+            ]
+          },
+          {
+            "stream": {
+              "code_file_path": "/app/app/telemetry.py",
+              "code_function_name": "__call__",
+              "code_line_number": "87",
+              "detected_level": "ERROR",
+              "flags": "1",
+              "http_request_method": "GET",
+              "http_response_status_code": "500",
+              "http_route": "/api/orders/{order_id}",
+              "observed_timestamp": "1790760137890102105",
+              "scope_name": "order-tracker.requests",
+              "service_name": "order-tracker",
+              "service_version": "hw04-instrumented",
+              "severity_number": "17",
+              "severity_text": "ERROR",
+              "span_id": "89c85d0899a25eea",
+              "telemetry_sdk_language": "python",
+              "telemetry_sdk_name": "opentelemetry",
+              "telemetry_sdk_version": "1.38.0",
+              "trace_id": "3e9038bec6a8dbfd27a8163a3a29668e"
+            },
+            "values": [
+              [
+                "1790760137889778176",
+                "request finished"
+              ]
+            ]
+          },
+          {
+            "stream": {
+              "code_file_path": "/app/app/telemetry.py",
+              "code_function_name": "__call__",
+              "code_line_number": "87",
+              "detected_level": "ERROR",
+              "flags": "1",
+              "http_request_method": "GET",
+              "http_response_status_code": "500",
+              "http_route": "/api/orders/{order_id}",
+              "observed_timestamp": "1790760136161852207",
+              "scope_name": "order-tracker.requests",
+              "service_name": "order-tracker",
+              "service_version": "hw04-instrumented",
+              "severity_number": "17",
+              "severity_text": "ERROR",
+              "span_id": "8548ec35347e4dd1",
+              "telemetry_sdk_language": "python",
+              "telemetry_sdk_name": "opentelemetry",
+              "telemetry_sdk_version": "1.38.0",
+              "trace_id": "fc78cee7f36d7fa6ac13ec6a3c134e30"
+            },
+            "values": [
+              [
+                "1790760136161692672",
+                "request finished"
+              ]
+            ]
+          },
+          {
+            "stream": {
+              "code_file_path": "/app/app/telemetry.py",
+              "code_function_name": "__call__",
+              "code_line_number": "87",
+              "detected_level": "ERROR",
+              "flags": "1",
+              "http_request_method": "GET",
+              "http_response_status_code": "500",
+              "http_route": "/api/orders/{order_id}",
+              "observed_timestamp": "1790760135074754586",
+              "scope_name": "order-tracker.requests",
+              "service_name": "order-tracker",
+              "service_version": "hw04-instrumented",
+              "severity_number": "17",
+              "severity_text": "ERROR",
+              "span_id": "7b19f010ad2ea3cf",
+              "telemetry_sdk_language": "python",
+              "telemetry_sdk_name": "opentelemetry",
+              "telemetry_sdk_version": "1.38.0",
+              "trace_id": "0628a34c8338301ce32da8661f010958"
+            },
+            "values": [
+              [
+                "1790760135074656512",
+                "request finished"
+              ]
+            ]
+          },
+          {
+            "stream": {
+              "code_file_path": "/app/app/telemetry.py",
+              "code_function_name": "__call__",
+              "code_line_number": "87",
+              "detected_level": "ERROR",
+              "flags": "1",
+              "http_request_method": "GET",
+              "http_response_status_code": "500",
+              "http_route": "/api/orders/{order_id}",
+              "observed_timestamp": "1790760133996650729",
+              "scope_name": "order-tracker.requests",
+              "service_name": "order-tracker",
+              "service_version": "hw04-instrumented",
+              "severity_number": "17",
+              "severity_text": "ERROR",
+              "span_id": "db3b40cf97aa6061",
+              "telemetry_sdk_language": "python",
+              "telemetry_sdk_name": "opentelemetry",
+              "telemetry_sdk_version": "1.38.0",
+              "trace_id": "7253200e06433141f0d2f070f73a6e76"
+            },
+            "values": [
+              [
+                "1790760133996554240",
+                "request finished"
+              ]
+            ]
+          },
+          {
+            "stream": {
+              "code_file_path": "/app/app/telemetry.py",
+              "code_function_name": "__call__",
+              "code_line_number": "87",
+              "detected_level": "ERROR",
+              "flags": "1",
+              "http_request_method": "GET",
+              "http_response_status_code": "500",
+              "http_route": "/api/orders/{order_id}",
+              "observed_timestamp": "1790760132827279226",
+              "scope_name": "order-tracker.requests",
+              "service_name": "order-tracker",
+              "service_version": "hw04-instrumented",
+              "severity_number": "17",
+              "severity_text": "ERROR",
+              "span_id": "abd979dadc4e9ef2",
+              "telemetry_sdk_language": "python",
+              "telemetry_sdk_name": "opentelemetry",
+              "telemetry_sdk_version": "1.38.0",
+              "trace_id": "4fd7bfca7d6bfea267805388e5a79eda"
+            },
+            "values": [
+              [
+                "1790760132827140864",
+                "request finished"
+              ]
+            ]
+          },
+          {
+            "stream": {
+              "code_file_path": "/app/app/telemetry.py",
+              "code_function_name": "__call__",
+              "code_line_number": "87",
+              "detected_level": "ERROR",
+              "flags": "1",
+              "http_request_method": "GET",
+              "http_response_status_code": "500",
+              "http_route": "/api/orders/{order_id}",
+              "observed_timestamp": "1790760131702989968",
+              "scope_name": "order-tracker.requests",
+              "service_name": "order-tracker",
+              "service_version": "hw04-instrumented",
+              "severity_number": "17",
+              "severity_text": "ERROR",
+              "span_id": "0ab831447bc81bda",
+              "telemetry_sdk_language": "python",
+              "telemetry_sdk_name": "opentelemetry",
+              "telemetry_sdk_version": "1.38.0",
+              "trace_id": "a6ffcfcef5955b1da01feb14dadc632b"
+            },
+            "values": [
+              [
+                "1790760131702889472",
+                "request finished"
+              ]
+            ]
+          },
+          {
+            "stream": {
+              "code_file_path": "/app/app/telemetry.py",
+              "code_function_name": "__call__",
+              "code_line_number": "87",
+              "detected_level": "ERROR",
+              "flags": "1",
+              "http_request_method": "GET",
+              "http_response_status_code": "500",
+              "http_route": "/api/orders/{order_id}",
+              "observed_timestamp": "1790760130586522506",
+              "scope_name": "order-tracker.requests",
+              "service_name": "order-tracker",
+              "service_version": "hw04-instrumented",
+              "severity_number": "17",
+              "severity_text": "ERROR",
+              "span_id": "e98070b680c7c538",
+              "telemetry_sdk_language": "python",
+              "telemetry_sdk_name": "opentelemetry",
+              "telemetry_sdk_version": "1.38.0",
+              "trace_id": "45802e597866b02c1a71b12c3ce70bf7"
+            },
+            "values": [
+              [
+                "1790760130586416896",
+                "request finished"
+              ]
+            ]
+          },
+          {
+            "stream": {
+              "code_file_path": "/app/app/telemetry.py",
+              "code_function_name": "__call__",
+              "code_line_number": "87",
+              "detected_level": "ERROR",
+              "flags": "1",
+              "http_request_method": "GET",
+              "http_response_status_code": "500",
+              "http_route": "/api/orders/{order_id}",
+              "observed_timestamp": "1790760129495496155",
+              "scope_name": "order-tracker.requests",
+              "service_name": "order-tracker",
+              "service_version": "hw04-instrumented",
+              "severity_number": "17",
+              "severity_text": "ERROR",
+              "span_id": "cdd73dcd12946219",
+              "telemetry_sdk_language": "python",
+              "telemetry_sdk_name": "opentelemetry",
+              "telemetry_sdk_version": "1.38.0",
+              "trace_id": "aa11b1829850f1f0acde288c10a8a1f8"
+            },
+            "values": [
+              [
+                "1790760129495405568",
+                "request finished"
+              ]
+            ]
+          },
+          {
+            "stream": {
+              "code_file_path": "/app/app/telemetry.py",
+              "code_function_name": "__call__",
+              "code_line_number": "87",
+              "detected_level": "ERROR",
+              "flags": "1",
+              "http_request_method": "GET",
+              "http_response_status_code": "500",
+              "http_route": "/api/orders/{order_id}",
+              "observed_timestamp": "1790760128397474069",
+              "scope_name": "order-tracker.requests",
+              "service_name": "order-tracker",
+              "service_version": "hw04-instrumented",
+              "severity_number": "17",
+              "severity_text": "ERROR",
+              "span_id": "db6c10d00c0df692",
+              "telemetry_sdk_language": "python",
+              "telemetry_sdk_name": "opentelemetry",
+              "telemetry_sdk_version": "1.38.0",
+              "trace_id": "c8050ed8bb99bc099e6a85875e35eee4"
+            },
+            "values": [
+              [
+                "1790760128397420800",
+                "request finished"
+              ]
+            ]
+          },
+          {
+            "stream": {
+              "code_file_path": "/app/app/telemetry.py",
+              "code_function_name": "__call__",
+              "code_line_number": "87",
+              "detected_level": "ERROR",
+              "flags": "1",
+              "http_request_method": "GET",
+              "http_response_status_code": "500",
+              "http_route": "/api/orders/{order_id}",
+              "observed_timestamp": "1790760127302686214",
+              "scope_name": "order-tracker.requests",
+              "service_name": "order-tracker",
+              "service_version": "hw04-instrumented",
+              "severity_number": "17",
+              "severity_text": "ERROR",
+              "span_id": "377c7341072355ea",
+              "telemetry_sdk_language": "python",
+              "telemetry_sdk_name": "opentelemetry",
+              "telemetry_sdk_version": "1.38.0",
+              "trace_id": "0c33a1535157ce4847550ef2982627d8"
+            },
+            "values": [
+              [
+                "1790760127302494208",
+                "request finished"
+              ]
+            ]
+          },
+          {
+            "stream": {
+              "code_file_path": "/app/app/telemetry.py",
+              "code_function_name": "__call__",
+              "code_line_number": "87",
+              "detected_level": "ERROR",
+              "flags": "1",
+              "http_request_method": "GET",
+              "http_response_status_code": "500",
+              "http_route": "/api/orders/{order_id}",
+              "observed_timestamp": "1790760126115545280",
+              "scope_name": "order-tracker.requests",
+              "service_name": "order-tracker",
+              "service_version": "hw04-instrumented",
+              "severity_number": "17",
+              "severity_text": "ERROR",
+              "span_id": "fc691192c6bdfb57",
+              "telemetry_sdk_language": "python",
+              "telemetry_sdk_name": "opentelemetry",
+              "telemetry_sdk_version": "1.38.0",
+              "trace_id": "80df3105a345ab38403df48aab156d27"
+            },
+            "values": [
+              [
+                "1790760126115350528",
+                "request finished"
+              ]
+            ]
+          },
+          {
+            "stream": {
+              "code_file_path": "/app/app/telemetry.py",
+              "code_function_name": "__call__",
+              "code_line_number": "87",
+              "detected_level": "ERROR",
+              "flags": "1",
+              "http_request_method": "GET",
+              "http_response_status_code": "500",
+              "http_route": "/api/orders/{order_id}",
+              "observed_timestamp": "1790760124830430054",
+              "scope_name": "order-tracker.requests",
+              "service_name": "order-tracker",
+              "service_version": "hw04-instrumented",
+              "severity_number": "17",
+              "severity_text": "ERROR",
+              "span_id": "1e1c0f38ebd13ec5",
+              "telemetry_sdk_language": "python",
+              "telemetry_sdk_name": "opentelemetry",
+              "telemetry_sdk_version": "1.38.0",
+              "trace_id": "eee362a70216ac50826c81712c9f90ed"
+            },
+            "values": [
+              [
+                "1790760124823939584",
+                "request finished"
+              ]
+            ]
+          },
+          {
+            "stream": {
+              "code_file_path": "/app/app/telemetry.py",
+              "code_function_name": "__call__",
+              "code_line_number": "87",
+              "detected_level": "ERROR",
+              "flags": "1",
+              "http_request_method": "GET",
+              "http_response_status_code": "500",
+              "http_route": "/api/orders/{order_id}",
+              "observed_timestamp": "1790760123698565683",
+              "scope_name": "order-tracker.requests",
+              "service_name": "order-tracker",
+              "service_version": "hw04-instrumented",
+              "severity_number": "17",
+              "severity_text": "ERROR",
+              "span_id": "1aa7ccb7e72f7ede",
+              "telemetry_sdk_language": "python",
+              "telemetry_sdk_name": "opentelemetry",
+              "telemetry_sdk_version": "1.38.0",
+              "trace_id": "8a067cc07890413d12c0b3555daf17ea"
+            },
+            "values": [
+              [
+                "1790760123698483200",
+                "request finished"
+              ]
+            ]
+          },
+          {
+            "stream": {
+              "code_file_path": "/app/app/telemetry.py",
+              "code_function_name": "__call__",
+              "code_line_number": "87",
+              "detected_level": "ERROR",
+              "flags": "1",
+              "http_request_method": "GET",
+              "http_response_status_code": "500",
+              "http_route": "/api/orders/{order_id}",
+              "observed_timestamp": "1790760122571807016",
+              "scope_name": "order-tracker.requests",
+              "service_name": "order-tracker",
+              "service_version": "hw04-instrumented",
+              "severity_number": "17",
+              "severity_text": "ERROR",
+              "span_id": "0f244ca021e415ac",
+              "telemetry_sdk_language": "python",
+              "telemetry_sdk_name": "opentelemetry",
+              "telemetry_sdk_version": "1.38.0",
+              "trace_id": "b316e568d13c5eae7780b98ccd78c36b"
+            },
+            "values": [
+              [
+                "1790760122571631872",
+                "request finished"
+              ]
+            ]
+          },
+          {
+            "stream": {
+              "code_file_path": "/app/app/telemetry.py",
+              "code_function_name": "__call__",
+              "code_line_number": "87",
+              "detected_level": "ERROR",
+              "flags": "1",
+              "http_request_method": "GET",
+              "http_response_status_code": "500",
+              "http_route": "/api/orders/{order_id}",
+              "observed_timestamp": "1790760121437370350",
+              "scope_name": "order-tracker.requests",
+              "service_name": "order-tracker",
+              "service_version": "hw04-instrumented",
+              "severity_number": "17",
+              "severity_text": "ERROR",
+              "span_id": "7e0fb155dfc28c3f",
+              "telemetry_sdk_language": "python",
+              "telemetry_sdk_name": "opentelemetry",
+              "telemetry_sdk_version": "1.38.0",
+              "trace_id": "65f0311f51ab610a6b80c97b9eb91222"
+            },
+            "values": [
+              [
+                "1790760121437025536",
+                "request finished"
+              ]
+            ]
+          },
+          {
+            "stream": {
+              "code_file_path": "/app/app/telemetry.py",
+              "code_function_name": "__call__",
+              "code_line_number": "87",
+              "detected_level": "ERROR",
+              "flags": "1",
+              "http_request_method": "GET",
+              "http_response_status_code": "500",
+              "http_route": "/api/orders/{order_id}",
+              "observed_timestamp": "1790760120246902487",
+              "scope_name": "order-tracker.requests",
+              "service_name": "order-tracker",
+              "service_version": "hw04-instrumented",
+              "severity_number": "17",
+              "severity_text": "ERROR",
+              "span_id": "3c1bd91eb1c7c1f5",
+              "telemetry_sdk_language": "python",
+              "telemetry_sdk_name": "opentelemetry",
+              "telemetry_sdk_version": "1.38.0",
+              "trace_id": "eba03cc109ca9d48f3da565b476cf775"
+            },
+            "values": [
+              [
+                "1790760120246802432",
+                "request finished"
+              ]
+            ]
+          },
+          {
+            "stream": {
+              "code_file_path": "/app/app/telemetry.py",
+              "code_function_name": "__call__",
+              "code_line_number": "87",
+              "detected_level": "ERROR",
+              "flags": "1",
+              "http_request_method": "GET",
+              "http_response_status_code": "500",
+              "http_route": "/api/orders/{order_id}",
+              "observed_timestamp": "1790760118449390458",
+              "scope_name": "order-tracker.requests",
+              "service_name": "order-tracker",
+              "service_version": "hw04-instrumented",
+              "severity_number": "17",
+              "severity_text": "ERROR",
+              "span_id": "418593f86f01b289",
+              "telemetry_sdk_language": "python",
+              "telemetry_sdk_name": "opentelemetry",
+              "telemetry_sdk_version": "1.38.0",
+              "trace_id": "624355b672552f1ddce3083d00d87486"
+            },
+            "values": [
+              [
+                "1790760118449269248",
+                "request finished"
+              ]
+            ]
+          }
+        ],
+        "stats": {
+          "summary": {
+            "bytesProcessedPerSecond": 137749,
+            "linesProcessedPerSecond": 860,
+            "totalBytesProcessed": 54080,
+            "totalLinesProcessed": 338,
+            "execTime": 0.392597,
+            "queueTime": 0.000938,
+            "subqueries": 0,
+            "totalEntriesReturned": 20,
+            "splits": 1,
+            "shards": 1,
+            "totalPostFilterLines": 338,
+            "totalStructuredMetadataBytesProcessed": 48672
+          },
+          "querier": {
+            "store": {
+              "totalChunksRef": 0,
+              "totalChunksDownloaded": 0,
+              "chunksDownloadTime": 0,
+              "queryReferencedStructuredMetadata": false,
+              "chunk": {
+                "headChunkBytes": 0,
+                "headChunkLines": 0,
+                "decompressedBytes": 0,
+                "decompressedLines": 0,
+                "compressedBytes": 0,
+                "totalDuplicates": 0,
+                "postFilterLines": 0,
+                "headChunkStructuredMetadataBytes": 0,
+                "decompressedStructuredMetadataBytes": 0
+              },
+              "chunkRefsFetchTime": 0,
+              "congestionControlLatency": 0,
+              "pipelineWrapperFilteredLines": 0
+            }
+          },
+          "ingester": {
+            "totalReached": 1,
+            "totalChunksMatched": 1,
+            "totalBatches": 1,
+            "totalLinesSent": 20,
+            "store": {
+              "totalChunksRef": 0,
+              "totalChunksDownloaded": 0,
+              "chunksDownloadTime": 0,
+              "queryReferencedStructuredMetadata": false,
+              "chunk": {
+                "headChunkBytes": 54080,
+                "headChunkLines": 338,
+                "decompressedBytes": 0,
+                "decompressedLines": 0,
+                "compressedBytes": 0,
+                "totalDuplicates": 0,
+                "postFilterLines": 338,
+                "headChunkStructuredMetadataBytes": 48672,
+                "decompressedStructuredMetadataBytes": 0
+              },
+              "chunkRefsFetchTime": 2051591,
+              "congestionControlLatency": 0,
+              "pipelineWrapperFilteredLines": 0
+            }
+          },
+          "cache": {
+            "chunk": {
+              "entriesFound": 0,
+              "entriesRequested": 0,
+              "entriesStored": 0,
+              "bytesReceived": 0,
+              "bytesSent": 0,
+              "requests": 0,
+              "downloadTime": 0,
+              "queryLengthServed": 0
+            },
+            "index": {
+              "entriesFound": 0,
+              "entriesRequested": 0,
+              "entriesStored": 0,
+              "bytesReceived": 0,
+              "bytesSent": 0,
+              "requests": 0,
+              "downloadTime": 0,
+              "queryLengthServed": 0
+            },
+            "result": {
+              "entriesFound": 0,
+              "entriesRequested": 0,
+              "entriesStored": 0,
+              "bytesReceived": 0,
+              "bytesSent": 0,
+              "requests": 0,
+              "downloadTime": 0,
+              "queryLengthServed": 0
+            },
+            "statsResult": {
+              "entriesFound": 0,
+              "entriesRequested": 0,
+              "entriesStored": 0,
+              "bytesReceived": 0,
+              "bytesSent": 0,
+              "requests": 0,
+              "downloadTime": 0,
+              "queryLengthServed": 0
+            },
+            "volumeResult": {
+              "entriesFound": 0,
+              "entriesRequested": 0,
+              "entriesStored": 0,
+              "bytesReceived": 0,
+              "bytesSent": 0,
+              "requests": 0,
+              "downloadTime": 0,
+              "queryLengthServed": 0
+            },
+            "seriesResult": {
+              "entriesFound": 0,
+              "entriesRequested": 0,
+              "entriesStored": 0,
+              "bytesReceived": 0,
+              "bytesSent": 0,
+              "requests": 0,
+              "downloadTime": 0,
+              "queryLengthServed": 0
+            },
+            "labelResult": {
+              "entriesFound": 0,
+              "entriesRequested": 0,
+              "entriesStored": 0,
+              "bytesReceived": 0,
+              "bytesSent": 0,
+              "requests": 0,
+              "downloadTime": 0,
+              "queryLengthServed": 0
+            },
+            "instantMetricResult": {
+              "entriesFound": 0,
+              "entriesRequested": 0,
+              "entriesStored": 0,
+              "bytesReceived": 0,
+              "bytesSent": 0,
+              "requests": 0,
+              "downloadTime": 0,
+              "queryLengthServed": 0
+            }
+          },
+          "index": {
+            "totalChunks": 0,
+            "postFilterChunks": 0,
+            "shardsDuration": 0,
+            "usedBloomFilters": false
+          }
+        }
+      }
+    },
+    "traces": {
+      "traces": [
+        {
+          "traceID": "af058beb07ff390ab08ed0a323ded0e",
+          "rootServiceName": "order-tracker",
+          "rootTraceName": "GET /api/orders/{order_id}",
+          "startTimeUnixNano": "1790759258729517533",
+          "durationMs": 6,
+          "spanSet": {
+            "spans": [
+              {
+                "spanID": "22206428deca6ed8",
+                "startTimeUnixNano": "1790759258729517533",
+                "durationNanos": "6541028",
+                "attributes": [
+                  {
+                    "key": "service.name",
+                    "value": {
+                      "stringValue": "order-tracker"
+                    }
+                  },
+                  {
+                    "key": "status",
+                    "value": {
+                      "stringValue": "error"
+                    }
+                  }
+                ]
+              }
+            ],
+            "matched": 1
+          },
+          "spanSets": [
+            {
+              "spans": [
+                {
+                  "spanID": "22206428deca6ed8",
+                  "startTimeUnixNano": "1790759258729517533",
+                  "durationNanos": "6541028",
+                  "attributes": [
+                    {
+                      "key": "service.name",
+                      "value": {
+                        "stringValue": "order-tracker"
+                      }
+                    },
+                    {
+                      "key": "status",
+                      "value": {
+                        "stringValue": "error"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "matched": 1
+            }
+          ],
+          "serviceStats": {
+            "order-tracker": {
+              "spanCount": 1,
+              "errorCount": 1
+            }
+          }
+        },
+        {
+          "traceID": "b7129acf23bb025da33f0508960159dc",
+          "rootServiceName": "order-tracker",
+          "rootTraceName": "GET /api/orders/{order_id}",
+          "startTimeUnixNano": "1790759257677599926",
+          "durationMs": 10,
+          "spanSet": {
+            "spans": [
+              {
+                "spanID": "f13279a68b1c8c64",
+                "startTimeUnixNano": "1790759257677599926",
+                "durationNanos": "10119527",
+                "attributes": [
+                  {
+                    "key": "service.name",
+                    "value": {
+                      "stringValue": "order-tracker"
+                    }
+                  },
+                  {
+                    "key": "status",
+                    "value": {
+                      "stringValue": "error"
+                    }
+                  }
+                ]
+              }
+            ],
+            "matched": 1
+          },
+          "spanSets": [
+            {
+              "spans": [
+                {
+                  "spanID": "f13279a68b1c8c64",
+                  "startTimeUnixNano": "1790759257677599926",
+                  "durationNanos": "10119527",
+                  "attributes": [
+                    {
+                      "key": "service.name",
+                      "value": {
+                        "stringValue": "order-tracker"
+                      }
+                    },
+                    {
+                      "key": "status",
+                      "value": {
+                        "stringValue": "error"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "matched": 1
+            }
+          ],
+          "serviceStats": {
+            "order-tracker": {
+              "spanCount": 1,
+              "errorCount": 1
+            }
+          }
+        },
+        {
+          "traceID": "3e3a0b7b2f666d7a668e5c1163e8f181",
+          "rootServiceName": "order-tracker",
+          "rootTraceName": "GET /api/orders/{order_id}",
+          "startTimeUnixNano": "1790759254525009264",
+          "durationMs": 6,
+          "spanSet": {
+            "spans": [
+              {
+                "spanID": "7be4c9a90a6bc6f8",
+                "startTimeUnixNano": "1790759254525009264",
+                "durationNanos": "6056135",
+                "attributes": [
+                  {
+                    "key": "service.name",
+                    "value": {
+                      "stringValue": "order-tracker"
+                    }
+                  },
+                  {
+                    "key": "status",
+                    "value": {
+                      "stringValue": "error"
+                    }
+                  }
+                ]
+              }
+            ],
+            "matched": 1
+          },
+          "spanSets": [
+            {
+              "spans": [
+                {
+                  "spanID": "7be4c9a90a6bc6f8",
+                  "startTimeUnixNano": "1790759254525009264",
+                  "durationNanos": "6056135",
+                  "attributes": [
+                    {
+                      "key": "service.name",
+                      "value": {
+                        "stringValue": "order-tracker"
+                      }
+                    },
+                    {
+                      "key": "status",
+                      "value": {
+                        "stringValue": "error"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "matched": 1
+            }
+          ],
+          "serviceStats": {
+            "order-tracker": {
+              "spanCount": 1,
+              "errorCount": 1
+            }
+          }
+        },
+        {
+          "traceID": "3087470ec89f62df57e9884472377380",
+          "rootServiceName": "order-tracker",
+          "rootTraceName": "GET /api/orders/{order_id}",
+          "startTimeUnixNano": "1790759252416607442",
+          "durationMs": 8,
+          "spanSet": {
+            "spans": [
+              {
+                "spanID": "19404f2504704405",
+                "startTimeUnixNano": "1790759252416607442",
+                "durationNanos": "8264366",
+                "attributes": [
+                  {
+                    "key": "service.name",
+                    "value": {
+                      "stringValue": "order-tracker"
+                    }
+                  },
+                  {
+                    "key": "status",
+                    "value": {
+                      "stringValue": "error"
+                    }
+                  }
+                ]
+              }
+            ],
+            "matched": 1
+          },
+          "spanSets": [
+            {
+              "spans": [
+                {
+                  "spanID": "19404f2504704405",
+                  "startTimeUnixNano": "1790759252416607442",
+                  "durationNanos": "8264366",
+                  "attributes": [
+                    {
+                      "key": "service.name",
+                      "value": {
+                        "stringValue": "order-tracker"
+                      }
+                    },
+                    {
+                      "key": "status",
+                      "value": {
+                        "stringValue": "error"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "matched": 1
+            }
+          ],
+          "serviceStats": {
+            "order-tracker": {
+              "spanCount": 1,
+              "errorCount": 1
+            }
+          }
+        },
+        {
+          "traceID": "32c2f7ea680b26d31a015d8fe6ba1e14",
+          "rootServiceName": "order-tracker",
+          "rootTraceName": "GET /api/orders/{order_id}",
+          "startTimeUnixNano": "1790759251351632455",
+          "durationMs": 11,
+          "spanSet": {
+            "spans": [
+              {
+                "spanID": "c8354fd5aba94ce8",
+                "startTimeUnixNano": "1790759251351632455",
+                "durationNanos": "11324332",
+                "attributes": [
+                  {
+                    "key": "service.name",
+                    "value": {
+                      "stringValue": "order-tracker"
+                    }
+                  },
+                  {
+                    "key": "status",
+                    "value": {
+                      "stringValue": "error"
+                    }
+                  }
+                ]
+              }
+            ],
+            "matched": 1
+          },
+          "spanSets": [
+            {
+              "spans": [
+                {
+                  "spanID": "c8354fd5aba94ce8",
+                  "startTimeUnixNano": "1790759251351632455",
+                  "durationNanos": "11324332",
+                  "attributes": [
+                    {
+                      "key": "service.name",
+                      "value": {
+                        "stringValue": "order-tracker"
+                      }
+                    },
+                    {
+                      "key": "status",
+                      "value": {
+                        "stringValue": "error"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "matched": 1
+            }
+          ],
+          "serviceStats": {
+            "order-tracker": {
+              "spanCount": 1,
+              "errorCount": 1
+            }
+          }
+        },
+        {
+          "traceID": "69620649b518f4495fdf0aa8ba92a56d",
+          "rootServiceName": "order-tracker",
+          "rootTraceName": "GET /api/orders/{order_id}",
+          "startTimeUnixNano": "1790759247779266214",
+          "durationMs": 1447,
+          "spanSet": {
+            "spans": [
+              {
+                "spanID": "17ba9f0502bdfdcd",
+                "startTimeUnixNano": "1790759247779266214",
+                "durationNanos": "1447808704",
+                "attributes": [
+                  {
+                    "key": "service.name",
+                    "value": {
+                      "stringValue": "order-tracker"
+                    }
+                  },
+                  {
+                    "key": "status",
+                    "value": {
+                      "stringValue": "error"
+                    }
+                  }
+                ]
+              }
+            ],
+            "matched": 1
+          },
+          "spanSets": [
+            {
+              "spans": [
+                {
+                  "spanID": "17ba9f0502bdfdcd",
+                  "startTimeUnixNano": "1790759247779266214",
+                  "durationNanos": "1447808704",
+                  "attributes": [
+                    {
+                      "key": "service.name",
+                      "value": {
+                        "stringValue": "order-tracker"
+                      }
+                    },
+                    {
+                      "key": "status",
+                      "value": {
+                        "stringValue": "error"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "matched": 1
+            }
+          ],
+          "serviceStats": {
+            "order-tracker": {
+              "spanCount": 1,
+              "errorCount": 1
+            }
+          }
+        },
+        {
+          "traceID": "152c14807dfbde6c53b135f038abc46f",
+          "rootServiceName": "order-tracker",
+          "rootTraceName": "GET /api/orders/{order_id}",
+          "startTimeUnixNano": "1790759246343604964",
+          "durationMs": 385,
+          "spanSet": {
+            "spans": [
+              {
+                "spanID": "46a19f6c3627fa05",
+                "startTimeUnixNano": "1790759246343604964",
+                "durationNanos": "385288870",
+                "attributes": [
+                  {
+                    "key": "service.name",
+                    "value": {
+                      "stringValue": "order-tracker"
+                    }
+                  },
+                  {
+                    "key": "status",
+                    "value": {
+                      "stringValue": "error"
+                    }
+                  }
+                ]
+              }
+            ],
+            "matched": 1
+          },
+          "spanSets": [
+            {
+              "spans": [
+                {
+                  "spanID": "46a19f6c3627fa05",
+                  "startTimeUnixNano": "1790759246343604964",
+                  "durationNanos": "385288870",
+                  "attributes": [
+                    {
+                      "key": "service.name",
+                      "value": {
+                        "stringValue": "order-tracker"
+                      }
+                    },
+                    {
+                      "key": "status",
+                      "value": {
+                        "stringValue": "error"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "matched": 1
+            }
+          ],
+          "serviceStats": {
+            "order-tracker": {
+              "spanCount": 1,
+              "errorCount": 1
+            }
+          }
+        },
+        {
+          "traceID": "f4e660f4fae353c83f9d8a8e83fc18f6",
+          "rootServiceName": "order-tracker",
+          "rootTraceName": "GET /api/orders/{order_id}",
+          "startTimeUnixNano": "1790759245235819642",
+          "durationMs": 16,
+          "spanSet": {
+            "spans": [
+              {
+                "spanID": "16a2bf591e349525",
+                "startTimeUnixNano": "1790759245235819642",
+                "durationNanos": "16271159",
+                "attributes": [
+                  {
+                    "key": "service.name",
+                    "value": {
+                      "stringValue": "order-tracker"
+                    }
+                  },
+                  {
+                    "key": "status",
+                    "value": {
+                      "stringValue": "error"
+                    }
+                  }
+                ]
+              }
+            ],
+            "matched": 1
+          },
+          "spanSets": [
+            {
+              "spans": [
+                {
+                  "spanID": "16a2bf591e349525",
+                  "startTimeUnixNano": "1790759245235819642",
+                  "durationNanos": "16271159",
+                  "attributes": [
+                    {
+                      "key": "service.name",
+                      "value": {
+                        "stringValue": "order-tracker"
+                      }
+                    },
+                    {
+                      "key": "status",
+                      "value": {
+                        "stringValue": "error"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "matched": 1
+            }
+          ],
+          "serviceStats": {
+            "order-tracker": {
+              "spanCount": 1,
+              "errorCount": 1
+            }
+          }
+        },
+        {
+          "traceID": "e718c745912a40a887c50d564f02c44b",
+          "rootServiceName": "order-tracker",
+          "rootTraceName": "GET /api/orders/{order_id}",
+          "startTimeUnixNano": "1790759244196540016",
+          "durationMs": 12,
+          "spanSet": {
+            "spans": [
+              {
+                "spanID": "10d82ac5b39d59a4",
+                "startTimeUnixNano": "1790759244196540016",
+                "durationNanos": "12301854",
+                "attributes": [
+                  {
+                    "key": "status",
+                    "value": {
+                      "stringValue": "error"
+                    }
+                  },
+                  {
+                    "key": "service.name",
+                    "value": {
+                      "stringValue": "order-tracker"
+                    }
+                  }
+                ]
+              }
+            ],
+            "matched": 1
+          },
+          "spanSets": [
+            {
+              "spans": [
+                {
+                  "spanID": "10d82ac5b39d59a4",
+                  "startTimeUnixNano": "1790759244196540016",
+                  "durationNanos": "12301854",
+                  "attributes": [
+                    {
+                      "key": "status",
+                      "value": {
+                        "stringValue": "error"
+                      }
+                    },
+                    {
+                      "key": "service.name",
+                      "value": {
+                        "stringValue": "order-tracker"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "matched": 1
+            }
+          ],
+          "serviceStats": {
+            "order-tracker": {
+              "spanCount": 1,
+              "errorCount": 1
+            }
+          }
+        },
+        {
+          "traceID": "36cd492071d33a989efe59646563aa69",
+          "rootServiceName": "order-tracker",
+          "rootTraceName": "GET /api/orders/{order_id}",
+          "startTimeUnixNano": "1790759242806882460",
+          "durationMs": 341,
+          "spanSet": {
+            "spans": [
+              {
+                "spanID": "5f03bb9a16056611",
+                "startTimeUnixNano": "1790759242806882460",
+                "durationNanos": "341526602",
+                "attributes": [
+                  {
+                    "key": "service.name",
+                    "value": {
+                      "stringValue": "order-tracker"
+                    }
+                  },
+                  {
+                    "key": "status",
+                    "value": {
+                      "stringValue": "error"
+                    }
+                  }
+                ]
+              }
+            ],
+            "matched": 1
+          },
+          "spanSets": [
+            {
+              "spans": [
+                {
+                  "spanID": "5f03bb9a16056611",
+                  "startTimeUnixNano": "1790759242806882460",
+                  "durationNanos": "341526602",
+                  "attributes": [
+                    {
+                      "key": "service.name",
+                      "value": {
+                        "stringValue": "order-tracker"
+                      }
+                    },
+                    {
+                      "key": "status",
+                      "value": {
+                        "stringValue": "error"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "matched": 1
+            }
+          ],
+          "serviceStats": {
+            "order-tracker": {
+              "spanCount": 1,
+              "errorCount": 1
+            }
+          }
+        }
+      ],
+      "metrics": {
+        "inspectedBytes": "2261084",
+        "completedJobs": 1,
+        "totalJobs": 1
+      }
+    },
+    "trace_detail": {
+      "batches": [
+        {
+          "resource": {
+            "attributes": [
+              {
+                "key": "service.version",
+                "value": {
+                  "stringValue": "hw04-instrumented"
+                }
+              },
+              {
+                "key": "telemetry.sdk.language",
+                "value": {
+                  "stringValue": "python"
+                }
+              },
+              {
+                "key": "telemetry.sdk.name",
+                "value": {
+                  "stringValue": "opentelemetry"
+                }
+              },
+              {
+                "key": "telemetry.sdk.version",
+                "value": {
+                  "stringValue": "1.38.0"
+                }
+              },
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "order-tracker"
+                }
+              }
+            ]
+          },
+          "scopeSpans": [
+            {
+              "scope": {
+                "name": "order-tracker"
+              },
+              "spans": [
+                {
+                  "traceId": "CvBYvrB/85CrCO0KMj3tDg==",
+                  "spanId": "IiBkKN7Kbtg=",
+                  "name": "GET /api/orders/{order_id}",
+                  "kind": "SPAN_KIND_SERVER",
+                  "startTimeUnixNano": "1790759258729517533",
+                  "endTimeUnixNano": "1790759258736058561",
+                  "attributes": [
+                    {
+                      "key": "http.route",
+                      "value": {
+                        "stringValue": "/api/orders/{order_id}"
+                      }
+                    },
+                    {
+                      "key": "http.request.method",
+                      "value": {
+                        "stringValue": "GET"
+                      }
+                    },
+                    {
+                      "key": "http.response.status_code",
+                      "value": {
+                        "intValue": "500"
+                      }
+                    }
+                  ],
+                  "events": [
+                    {
+                      "timeUnixNano": "1790759258732502151",
+                      "name": "exception",
+                      "attributes": [
+                        {
+                          "key": "exception.type",
+                          "value": {
+                            "stringValue": "ValueError"
+                          }
+                        },
+                        {
+                          "key": "exception.message",
+                          "value": {
+                            "stringValue": "day is out of range for month"
+                          }
+                        },
+                        {
+                          "key": "exception.stacktrace",
+                          "value": {
+                            "stringValue": "Traceback (most recent call last):\n  File \"/app/app/telemetry.py\", line 78, in __call__\n    await self.app(scope, receive, tracked_send)\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py\", line 63, in __call__\n    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py\", line 53, in wrapped_app\n    raise exc\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py\", line 42, in wrapped_app\n    await app(scope, receive, sender)\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py\", line 18, in __call__\n    await self.app(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/routing.py\", line 676, in __call__\n    await self.middleware_stack(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 2734, in app\n    await route.handle(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 1281, in handle\n    await super().handle(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/routing.py\", line 282, in handle\n    await self.app(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 158, in app\n    await wrap_app_handling_exceptions(app, request)(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py\", line 53, in wrapped_app\n    raise exc\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py\", line 42, in wrapped_app\n    await app(scope, receive, sender)\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 144, in app\n    response = await f(request)\n               ^^^^^^^^^^^^^^^^\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 706, in app\n    raw_response = await run_endpoint_function(\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/a"
+                          }
+                        },
+                        {
+                          "key": "exception.escaped",
+                          "value": {
+                            "stringValue": "False"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "timeUnixNano": "1790759258736031594",
+                      "name": "exception",
+                      "attributes": [
+                        {
+                          "key": "exception.type",
+                          "value": {
+                            "stringValue": "ValueError"
+                          }
+                        },
+                        {
+                          "key": "exception.message",
+                          "value": {
+                            "stringValue": "day is out of range for month"
+                          }
+                        },
+                        {
+                          "key": "exception.stacktrace",
+                          "value": {
+                            "stringValue": "Traceback (most recent call last):\n  File \"/app/.venv/lib/python3.12/site-packages/opentelemetry/trace/__init__.py\", line 589, in use_span\n    yield span\n  File \"/app/.venv/lib/python3.12/site-packages/opentelemetry/sdk/trace/__init__.py\", line 1105, in start_as_current_span\n    yield span\n  File \"/app/app/telemetry.py\", line 78, in __call__\n    await self.app(scope, receive, tracked_send)\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py\", line 63, in __call__\n    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py\", line 53, in wrapped_app\n    raise exc\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py\", line 42, in wrapped_app\n    await app(scope, receive, sender)\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py\", line 18, in __call__\n    await self.app(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/routing.py\", line 676, in __call__\n    await self.middleware_stack(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 2734, in app\n    await route.handle(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 1281, in handle\n    await super().handle(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/routing.py\", line 282, in handle\n    await self.app(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 158, in app\n    await wrap_app_handling_exceptions(app, request)(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py\", line 53, in wrapped_app\n    raise exc\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py\", line 42, in wrapped_app\n    await app(scope, receive, sender)\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 144, in app\n"
+                          }
+                        },
+                        {
+                          "key": "exception.escaped",
+                          "value": {
+                            "stringValue": "False"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "status": {
+                    "message": "ValueError: day is out of range for month",
+                    "code": "STATUS_CODE_ERROR"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

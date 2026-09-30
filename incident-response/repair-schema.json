@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "properties": {
+    "explanation": {"type": "string"},
+    "old": {"type": "string"},
+    "new": {"type": "string"},
+    "result": {"type": "string"}
+  },
+  "required": ["explanation", "old", "new", "result"],
+  "additionalProperties": false
+}

@@ -1,0 +1,376 @@
+{
+  "http_status": 404,
+  "metrics": {
+    "status": "success",
+    "data": {
+      "resultType": "vector",
+      "result": [
+        {
+          "metric": {
+            "__name__": "http_server_requests_total",
+            "exported_job": "order-tracker",
+            "http_request_method": "GET",
+            "http_response_status_code": "404",
+            "http_route": "/api/orders/{order_id}",
+            "instance": "otel-collector:8889",
+            "job": "order-tracker",
+            "otel_scope_name": "order-tracker",
+            "service_name": "order-tracker",
+            "service_version": "hw04-instrumented",
+            "telemetry_sdk_language": "python",
+            "telemetry_sdk_name": "opentelemetry",
+            "telemetry_sdk_version": "1.38.0"
+          },
+          "value": [
+            1790759831.401,
+            "4"
+          ]
+        }
+      ]
+    }
+  },
+  "logs": {
+    "status": "success",
+    "data": {
+      "resultType": "streams",
+      "result": [
+        {
+          "stream": {
+            "code_file_path": "/app/app/telemetry.py",
+            "code_function_name": "__call__",
+            "code_line_number": "87",
+            "detected_level": "INFO",
+            "flags": "1",
+            "http_request_method": "GET",
+            "http_response_status_code": "404",
+            "http_route": "/api/orders/{order_id}",
+            "observed_timestamp": "1790759819242003794",
+            "scope_name": "order-tracker.requests",
+            "service_name": "order-tracker",
+            "service_version": "hw04-instrumented",
+            "severity_number": "9",
+            "severity_text": "INFO",
+            "span_id": "55b89530c5dd9a77",
+            "telemetry_sdk_language": "python",
+            "telemetry_sdk_name": "opentelemetry",
+            "telemetry_sdk_version": "1.38.0",
+            "trace_id": "fa84d3855aea4f339816aa916dee4946"
+          },
+          "values": [
+            [
+              "1790759819241366272",
+              "request finished"
+            ]
+          ]
+        }
+      ],
+      "stats": {
+        "summary": {
+          "bytesProcessedPerSecond": 636883,
+          "linesProcessedPerSecond": 3980,
+          "totalBytesProcessed": 37120,
+          "totalLinesProcessed": 232,
+          "execTime": 0.058284,
+          "queueTime": 0.001718,
+          "subqueries": 0,
+          "totalEntriesReturned": 1,
+          "splits": 1,
+          "shards": 1,
+          "totalPostFilterLines": 4,
+          "totalStructuredMetadataBytesProcessed": 33408
+        },
+        "querier": {
+          "store": {
+            "totalChunksRef": 0,
+            "totalChunksDownloaded": 0,
+            "chunksDownloadTime": 0,
+            "queryReferencedStructuredMetadata": false,
+            "chunk": {
+              "headChunkBytes": 0,
+              "headChunkLines": 0,
+              "decompressedBytes": 0,
+              "decompressedLines": 0,
+              "compressedBytes": 0,
+              "totalDuplicates": 0,
+              "postFilterLines": 0,
+              "headChunkStructuredMetadataBytes": 0,
+              "decompressedStructuredMetadataBytes": 0
+            },
+            "chunkRefsFetchTime": 0,
+            "congestionControlLatency": 0,
+            "pipelineWrapperFilteredLines": 0
+          }
+        },
+        "ingester": {
+          "totalReached": 1,
+          "totalChunksMatched": 1,
+          "totalBatches": 1,
+          "totalLinesSent": 1,
+          "store": {
+            "totalChunksRef": 0,
+            "totalChunksDownloaded": 0,
+            "chunksDownloadTime": 0,
+            "queryReferencedStructuredMetadata": true,
+            "chunk": {
+              "headChunkBytes": 37120,
+              "headChunkLines": 232,
+              "decompressedBytes": 0,
+              "decompressedLines": 0,
+              "compressedBytes": 0,
+              "totalDuplicates": 0,
+              "postFilterLines": 4,
+              "headChunkStructuredMetadataBytes": 33408,
+              "decompressedStructuredMetadataBytes": 0
+            },
+            "chunkRefsFetchTime": 1678061,
+            "congestionControlLatency": 0,
+            "pipelineWrapperFilteredLines": 0
+          }
+        },
+        "cache": {
+          "chunk": {
+            "entriesFound": 0,
+            "entriesRequested": 0,
+            "entriesStored": 0,
+            "bytesReceived": 0,
+            "bytesSent": 0,
+            "requests": 0,
+            "downloadTime": 0,
+            "queryLengthServed": 0
+          },
+          "index": {
+            "entriesFound": 0,
+            "entriesRequested": 0,
+            "entriesStored": 0,
+            "bytesReceived": 0,
+            "bytesSent": 0,
+            "requests": 0,
+            "downloadTime": 0,
+            "queryLengthServed": 0
+          },
+          "result": {
+            "entriesFound": 0,
+            "entriesRequested": 0,
+            "entriesStored": 0,
+            "bytesReceived": 0,
+            "bytesSent": 0,
+            "requests": 0,
+            "downloadTime": 0,
+            "queryLengthServed": 0
+          },
+          "statsResult": {
+            "entriesFound": 0,
+            "entriesRequested": 0,
+            "entriesStored": 0,
+            "bytesReceived": 0,
+            "bytesSent": 0,
+            "requests": 0,
+            "downloadTime": 0,
+            "queryLengthServed": 0
+          },
+          "volumeResult": {
+            "entriesFound": 0,
+            "entriesRequested": 0,
+            "entriesStored": 0,
+            "bytesReceived": 0,
+            "bytesSent": 0,
+            "requests": 0,
+            "downloadTime": 0,
+            "queryLengthServed": 0
+          },
+          "seriesResult": {
+            "entriesFound": 0,
+            "entriesRequested": 0,
+            "entriesStored": 0,
+            "bytesReceived": 0,
+            "bytesSent": 0,
+            "requests": 0,
+            "downloadTime": 0,
+            "queryLengthServed": 0
+          },
+          "labelResult": {
+            "entriesFound": 0,
+            "entriesRequested": 0,
+            "entriesStored": 0,
+            "bytesReceived": 0,
+            "bytesSent": 0,
+            "requests": 0,
+            "downloadTime": 0,
+            "queryLengthServed": 0
+          },
+          "instantMetricResult": {
+            "entriesFound": 0,
+            "entriesRequested": 0,
+            "entriesStored": 0,
+            "bytesReceived": 0,
+            "bytesSent": 0,
+            "requests": 0,
+            "downloadTime": 0,
+            "queryLengthServed": 0
+          }
+        },
+        "index": {
+          "totalChunks": 0,
+          "postFilterChunks": 0,
+          "shardsDuration": 0,
+          "usedBloomFilters": false
+        }
+      }
+    }
+  },
+  "traces": {
+    "traces": [
+      {
+        "traceID": "c3b0f7c3e11e7db3f27ca64df3e31d05",
+        "rootServiceName": "order-tracker",
+        "rootTraceName": "GET /api/orders/{order_id}",
+        "startTimeUnixNano": "1790758805096130764",
+        "durationMs": 3825,
+        "spanSet": {
+          "spans": [
+            {
+              "spanID": "efd8fde368fe80a6",
+              "startTimeUnixNano": "1790758805096130764",
+              "durationNanos": "3825826525",
+              "attributes": [
+                {
+                  "key": "http.response.status_code",
+                  "value": {
+                    "intValue": "404"
+                  }
+                },
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "order-tracker"
+                  }
+                }
+              ]
+            }
+          ],
+          "matched": 1
+        },
+        "spanSets": [
+          {
+            "spans": [
+              {
+                "spanID": "efd8fde368fe80a6",
+                "startTimeUnixNano": "1790758805096130764",
+                "durationNanos": "3825826525",
+                "attributes": [
+                  {
+                    "key": "http.response.status_code",
+                    "value": {
+                      "intValue": "404"
+                    }
+                  },
+                  {
+                    "key": "service.name",
+                    "value": {
+                      "stringValue": "order-tracker"
+                    }
+                  }
+                ]
+              }
+            ],
+            "matched": 1
+          }
+        ],
+        "serviceStats": {
+          "order-tracker": {
+            "spanCount": 1
+          }
+        }
+      }
+    ],
+    "metrics": {
+      "inspectedBytes": "1775288",
+      "completedJobs": 1,
+      "totalJobs": 1
+    }
+  },
+  "alert_rules": {
+    "status": "success",
+    "data": {
+      "groups": [
+        {
+          "name": "order-lookups",
+          "file": "Homework 04",
+          "folderUid": "cfzsuki9h8nwgf",
+          "rules": [
+            {
+              "state": "inactive",
+              "name": "Order lookup server errors",
+              "query": "sum(increase(http_server_requests_total{http_route=\"/api/orders/{order_id}\",http_response_status_code=~\"5..\"}[1m])) or vector(0)",
+              "queriedDatasourceUIDs": [
+                "prometheus"
+              ],
+              "annotations": {
+                "__dashboardUid__": "order-tracker",
+                "__panelId__": "2",
+                "dashboard": "http://localhost:3000/d/order-tracker/order-tracker",
+                "endpoint": "/api/orders/{order_id}",
+                "summary": "Order lookups are returning server errors.",
+                "time_window": "1 minute"
+              },
+              "alerts": [
+                {
+                  "labels": {
+                    "__grafana_autogenerated__": "true",
+                    "__grafana_receiver__": "homework-responder",
+                    "alertname": "Order lookup server errors",
+                    "grafana_folder": "Homework 04",
+                    "service": "order-tracker",
+                    "severity": "warning"
+                  },
+                  "annotations": {
+                    "__dashboardUid__": "order-tracker",
+                    "__panelId__": "2",
+                    "dashboard": "http://localhost:3000/d/order-tracker/order-tracker",
+                    "endpoint": "/api/orders/{order_id}",
+                    "summary": "Order lookups are returning server errors.",
+                    "time_window": "1 minute"
+                  },
+                  "state": "Normal",
+                  "activeAt": "2026-09-30T09:14:40Z",
+                  "value": ""
+                }
+              ],
+              "totals": {
+                "normal": 1
+              },
+              "totalsFiltered": {
+                "normal": 1
+              },
+              "uid": "order-lookup-5xx",
+              "folderUid": "cfzsuki9h8nwgf",
+              "labels": {
+                "alertname": "OrderLookup5xx",
+                "service": "order-tracker",
+                "severity": "warning"
+              },
+              "health": "ok",
+              "type": "alerting",
+              "lastEvaluation": "2026-09-30T09:17:10Z",
+              "evaluationTime": 0.190619442,
+              "isPaused": false,
+              "notificationSettings": {
+                "receiver": "homework-responder"
+              },
+              "provenance": "file"
+            }
+          ],
+          "totals": {
+            "inactive": 1
+          },
+          "interval": 10,
+          "lastEvaluation": "2026-09-30T09:17:10Z",
+          "evaluationTime": 0.190619442
+        }
+      ],
+      "totals": {
+        "inactive": 1
+      }
+    }
+  }
+}

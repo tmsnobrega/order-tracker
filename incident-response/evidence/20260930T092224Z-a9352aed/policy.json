@@ -1,0 +1,6 @@
+{
+  "decision": "allowed",
+  "allowed_file": "app/main.py",
+  "allowed_change": "Use timedelta(days=2) for express delivery",
+  "validation": "calendar contract and starter tests passed"
+}
